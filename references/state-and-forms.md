@@ -35,7 +35,8 @@ syncObservable(calendarState, {
 * MMKV is used through Legend's persist plugin, never raw in features (rule). `src/config/storage.ts`
   holds only the MMKV instance the persist plugin and non-React code (e.g. the API client) share.
 * Logout resets every user-scoped observable together with `queryClient.clear()`.
-Check the Legend State docs for the installed version (hook names changed across v3 releases).
+Check the Legend State docs for the installed version: v3 (`useValue`) is published under the npm `beta` tag while `latest` is v2
+(`useSelector(() => state.x.get())`); hook names also changed across v3 releases.
 
 ## Feature context: `{ state, actions, meta }` (rule)
 ```tsx
